@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>e-commerce</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="mój kolejny projekt"/>
+  <meta name="keywords" content="Java script, początki, HTML,CSS, programowanie"/>
+  <meta name="author" content="Karolina Rażniak"/>
+  <meta property="og:title" contelt="ćwiczenie programowe"/>
+  <meta name="description" content="mój następny projekt samodzielny"/>
+  <link rel="stylesheet" type="text/css" media="screen" charset="utf-8" href="style-nav.css"/>
+  <link rel="stylesheet" href="index-main.scss">
+  <script src="index.js" defer></script>
+</head>
+<body>
+    <div class="navigation">
+        <ul>
+            <li class="list active">
+                <a herf="#">
+                    <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <spna class="text">Home</spna>
+                </a>
+            </li>
+            <li class="list">
+                <a herf="#">
+                    <span class="icon">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </span>
+                    <spna class="text">User</spna>
+                </a>
+            </li>
+            <li class="list">
+                <a herf="#">
+                    <span class="icon">
+                        <ion-icon name="chatbubble-outline"></ion-icon>
+                    </span>
+                    <spna class="text">Mesaage</spna>
+                </a>
+            </li>
+            <li class="list">
+                <a herf="#">
+                    <span class="icon">
+                        <ion-icon name="camera-outline"></ion-icon>
+                    </span>
+                    <spna class="text">Photos</spna>
+                </a>
+            </li>
+            <li class="list">
+                <a herf="#">
+                    <span class="icon">
+                        <ion-icon name="construct-outline"></ion-icon>
+                    </span>
+                    <spna class="text">Settings</spna>
+                </a>
+            </li>
+            <div class="indicator"></div>
+        </ul>
+    </div>
+
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove('active'));
+            this.classList.add('active'); 
+        }
+        list.forEach((item)=>
+        item.addEventListener('click',activeLink));
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
